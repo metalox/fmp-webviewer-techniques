@@ -1,0 +1,14 @@
+# CSS Snippets
+
+background-color: rgba(232, 237, 239,1) ; // cool blue-grey background color
+background-image: linear-gradient( rgb(232, 237, 239), white); // nice gradient
+color: rgba(39, 66, 86, 1); // dark blue text colour for cool blue-grey background
+color: rgba(72, 110, 136,1); // text color, for headings
+
+:root{  
+  --bckgrnd: rgb(232,237,239);
+  --bckgrndGrad: linear-gradient( rgb(232,237,239), rgb(255,255,255)); 
+  --textA: rgba(39,66,86,1);
+  --textB: rgba(39,66,86,.6);
+  --textH: rgba(72,110,136,1);
+}

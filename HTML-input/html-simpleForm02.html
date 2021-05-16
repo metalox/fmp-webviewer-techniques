@@ -1,0 +1,30 @@
+<h1 class="txtcenter">Pets & their people survey</h1>
+<p>please fill in this form</p>
+
+<form onkeydown="return event.key != 'Enter';">
+
+  <fieldset>
+
+  <legend>People & Pets</legend>
+
+    <label for="nameFirst" class="pale">First name*:</label><br>
+    <input type="text" id="nameFirst" name="nameFirst" value="" autofocus required><br>
+
+    <label for="nameLast" class="pale">Last name*:</label><br>
+    <input type="text" id="nameLast" name="nameLast" value="" required><br>
+
+    ###animalsSelect###
+
+    <label for="petName" class="pale">Pet Name:</label><br>
+    <input type="text" id="petName" name="petName" value=""><br>
+
+    ###prefsCheckbox###
+
+    <textarea name="notes" rows="10" cols="30" placeholder="notes..."></textarea><br>
+
+      <input type="submit" value="OK">
+      <input type="button" id="button1" value="Hello">
+      <input type="reset" value="Reset">
+
+  </fieldset>
+</form>
