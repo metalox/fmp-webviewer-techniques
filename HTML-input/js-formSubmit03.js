@@ -12,6 +12,7 @@ const id_people = recordinfo.getAttribute("data-id_people");
 const hashBefore = recordinfo.getAttribute("data-hashBefore");
 const newRecord = recordinfo.getAttribute("data-newRecord");
 
+// highlighting
 form.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';    
 }, true);
@@ -20,11 +21,12 @@ form.addEventListener('blur', (event) => {
   event.target.style.background = '';    
 }, true);
 
-function noEnter() {
+// control return key behaviour
+function noReturn() {
 form.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
 };
 
-function allowEnter() {
+function allowReturn() {
 form.removeAttribute("onkeydown");
 };
 
@@ -47,8 +49,8 @@ FileMaker.PerformScriptWithOption ( fmScriptEdit, "cancel" , "0" );
 }
 
 cancelbtn.addEventListener('click', cancel);
-notes.addEventListener('focus', allowEnter);
-notes.addEventListener('blur', noEnter);
-submitbtn.addEventListener('focus', allowEnter);
-submitbtn.addEventListener('blur', noEnter);
+notes.addEventListener('focus', allowReturn);
+notes.addEventListener('blur', noReturn);
+submitbtn.addEventListener('focus', allowReturn);
+submitbtn.addEventListener('blur', noReturn);
 form.addEventListener('submit', handleSubmit);
