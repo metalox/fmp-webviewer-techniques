@@ -13,12 +13,32 @@
     <label for="nameLast" class="pale">Last name*:</label><br>
     <input type="text" id="nameLast" name="nameLast" value="" required><br>
 
-    ###animalsSelect###
+    <label for="petAnimal" class="pale">Pet (animal):</label><br>
+    <select id="petAnimal" name="petAnimal">
+    <option value="none">None</option>  
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="sheep">Sheep</option>
+    <option value="hamster">Hamster</option>
+    <option value="fish">Fish</option>
+    <option value="crocodile">Very Large Australian Salt Water Crocodile</option>
+    </select><br>
 
     <label for="petName" class="pale">Pet Name:</label><br>
     <input type="text" id="petName" name="petName" value=""><br>
 
-    ###prefsCheckbox###
+ 
+  <p>
+    <input type="checkbox" name="prefs" id="catLover" value="cat lover" />
+    <label for="catLover">Cat Lover</label>
+ 
+    <input type="checkbox" name="prefs" id="dogLover" value="dog lover" />
+    <label for="dogLover">Dog Lover</label>
+ 
+    <input type="checkbox" name="prefs" id="sheepLover" value="sheep lover" />
+    <label for="sheepLover">Sheep Lover</label>
+  </p>
+
 
     <textarea name="notes" rows="10" cols="30" placeholder="notes..."></textarea><br>
 
