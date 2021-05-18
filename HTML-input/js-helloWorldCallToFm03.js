@@ -1,4 +1,5 @@
 var fmScriptEdit="edit person OK";
+//const form = document.querySelector('form');
 const form = document.getElementById("form1");
 const button1 = document.getElementById("button1");
 const submitbtn = document.getElementById("submitbtn");
@@ -36,8 +37,6 @@ const result = JSON.stringify( formData );
 FileMaker.PerformScriptWithOption ( fmScriptEdit, result , "0" );
 }
 
-//const form = document.querySelector('form');
 submitbtn.addEventListener('focus', allowEnter);
 submitbtn.addEventListener('blur', noEnter);
 form.addEventListener('submit', handleSubmit);
-
