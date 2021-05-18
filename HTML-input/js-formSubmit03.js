@@ -1,7 +1,5 @@
-// to do - deal with [Enter] better?
-// [Enter] shlould only submit when the submit button is in focus
-// But Enter should work as Return in the notes test area
-// and maybe Enter should set the value from a dropdown - without submitting - ?
+// [Return] should only submit when the submit button is in focus
+// but should work as [Return] in the notes test area
 
 const fmScriptEdit="edit person OK";
 //const form = document.querySelector('form');
@@ -50,9 +48,7 @@ FileMaker.PerformScriptWithOption ( fmScriptEdit, "cancel" , "0" );
 
 cancelbtn.addEventListener('click', cancel);
 notes.addEventListener('focus', allowEnter);
-// notes.addEventListener('blur', noEnter);
+notes.addEventListener('blur', noEnter);
 submitbtn.addEventListener('focus', allowEnter);
 submitbtn.addEventListener('blur', noEnter);
 form.addEventListener('submit', handleSubmit);
-
-
