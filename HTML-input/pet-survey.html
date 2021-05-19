@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css-default01.css">
+</head>
+<body>
+<input type="button" id="cancelbtn" value="Cancel">
+<div id="recordinfo" data-id_people="abc123" data-hashBefore="987654321" data-newRecord="0"></div>
+<h1 class="txtcenter">Pets & their people survey</h1>
+<p>please fill in this form</p>
+
+<form id="form1">
+
+  <fieldset>
+
+  <legend>People & Pets</legend>
+
+    <label for="nameFirst" class="pale">First name*:</label><br>
+    <input type="text" id="nameFirst" name="nameFirst" value="" autofocus required><br>
+
+    <label for="nameLast" class="pale">Last name*:</label><br>
+    <input type="text" id="nameLast" name="nameLast" value="" required><br>
+
+    <label for="petAnimal" class="pale">Pet (animal):</label><br>
+    <select id="petAnimal" name="petAnimal">
+    <option value="none">None</option>  
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="sheep">Sheep</option>
+    <option value="hamster">Hamster</option>
+    <option value="fish">Fish</option>
+    <option value="crocodile">Very Large Australian Salt Water Crocodile</option>
+    </select><br>
+
+    <label for="petName" class="pale">Pet Name:</label><br>
+    <input type="text" id="petName" name="petName" value=""><br>
+ 
+  <p>
+    <input type="checkbox" name="prefs" id="catlover" value="cat lover" />
+    <label for="catlover">Cat Lover</label>
+ 
+    <input type="checkbox" name="prefs" id="doglover" value="dog lover" />
+    <label for="doglover">Dog Lover</label>
+ 
+    <input type="checkbox" name="prefs" id="sheeplover" value="sheep lover" />
+    <label for="sheeplover">Sheep Lover</label>
+  </p>
+
+    <textarea name="notes" id="notes" rows="10" cols="30" placeholder="notes..."></textarea><br>
+
+      <input type="submit" value="OK">
+      <input type="button" id="hellobtn" value="Hello">
+      <input type="reset" value="Reset">
+
+  </fieldset>
+</form>
+<script src="pet-survey-script.js"></script>
+<footer>Data collected for internal use only.</footer>
+</html>
