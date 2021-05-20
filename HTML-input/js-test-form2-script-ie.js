@@ -1,8 +1,8 @@
 
 
 $( "form" ).submit(function( event ) {
-  var myObject = $( this ).serializeArray();
   event.preventDefault();
+  const myObject = $( this ).serializeArray();
   alert(JSON.stringify(myObject));
 });
 
