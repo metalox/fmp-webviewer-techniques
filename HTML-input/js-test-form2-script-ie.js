@@ -1,4 +1,6 @@
 
+
+
 function showValues() {
   var fields = $( ":input" ).serializeArray();
   $( "#results" ).empty();
@@ -6,6 +8,8 @@ function showValues() {
     $( "#results" ).append( field.value + " " );
   });
 }
+
+
 
 $( ":checkbox, :radio" ).click( showValues );
 $( "select" ).change( showValues );
