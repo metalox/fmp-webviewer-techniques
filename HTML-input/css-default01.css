@@ -17,6 +17,7 @@
 
 
 body {
+   background-color: rgb(232,237,239);
    background-image: var(--bckgrndGrad);
     font-family: Verdana, Helvetica, sans-serif;
     color: rgb(39,66,86);
