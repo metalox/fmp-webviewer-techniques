@@ -5,10 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
 <link rel="stylesheet" href="css-default01.css">
   <title>serializeArray demo</title>
+  <script src="jquery-min.js"></script>
 </head>
 <body>
  
-<form>
+<form id="form1">
   <div><input type="text" name="a" value="1" id="a"></div>
   <div><input type="text" name="b" value="2" id="b"></div>
   <div><input type="hidden" name="c" value="hidden value" id="c"></div>
@@ -21,14 +22,14 @@
     <option value="7">7</option>
   </select></div>
   <div>
-    <input type="checkbox" name="f" value="8" id="f">
+    <input type="checkbox" name="f" id="f" value="f">
+    <input type="checkbox" name="g" id="g" value="9">
   </div>
   <div>
-    <input type="submit" name="g" value="Submit" id="g">
+    <input type="submit" name="submitbtn" id="submitbtn" value="Submit">
   </div>
 </form>
  
-<script src="jquery-min.js"></script>
 <script src="js-test-form2-script-ie.js"></script>
 
 </body>
