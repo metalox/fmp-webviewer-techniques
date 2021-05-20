@@ -67,17 +67,17 @@ textarea{
 }
 
 input[type=button],input[type=submit],input[type=reset] {
-    background-color: rgb(72,110,136);
-    color: white;
-   font-size: 20px;
-   text-decoration: none;
-   border: none;
-   height: 48px;
-   width: 30%;
-   margin: auto;
+  background-color: rgb(72,110,136);
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border: none;
+  height: 48px;
+  width: 30%;
+  margin: auto;
 }
 
-input,textarea:focus {
+input:focus,select:focus,textarea:focus {
   background-color: pink;
 }
 
