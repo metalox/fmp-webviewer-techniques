@@ -70,23 +70,39 @@ textarea{
    margin: 24px 20px;
 }
 
-input[type=button],input[type=submit],input[type=reset] {
+button,input[type=button],input[type=submit],input[type=reset] {
   background-color: rgb(72,110,136);
   color: white;
   font-size: 20px;
   text-decoration: none;
   border: none;
   height: 48px;
-  width: 30%;
+  width: 25%;
   margin: auto;
 }
 
-input:focus,select:focus,textarea:focus {
-  background-color: pink;
+#cancelbtn{
+  width: auto;
 }
 
-button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{
-    cursor: pointer;
+.btncontainertop{
+  height: 60px;
+  position: relative;
+}
+
+.btncontainerbtm{
+    height: 60px;
+    position: relative;
+    margin-left: 100px; 
+}
+
+.centerh{  
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .txtleft {
@@ -99,4 +115,12 @@ button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]
 
 .txtcenter {
 text-align: center;
+}
+
+button:focus, input:focus,select:focus,textarea:focus {
+  background-color: pink;
+}
+
+button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{
+    cursor: pointer;
 }

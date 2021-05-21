@@ -1,3 +1,5 @@
+$("document").ready(function() {
+
 // [Return] should only submit when the submit button is in focus
 // but should work as [Return] in the notes test area
 
@@ -44,3 +46,6 @@ cancelbtn.addEventListener('click', cancel);
 form.addEventListener('submit', handleSubmit);
 notes.addEventListener('focus', allowReturn);
 notes.addEventListener('blur', noReturn);
+
+
+});

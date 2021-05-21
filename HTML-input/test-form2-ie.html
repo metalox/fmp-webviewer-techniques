@@ -9,7 +9,9 @@
 </head>
 <body>
 
-  <input type="button" id="cancelbtn" value="Cancel">
+  <div class="btncontainertop">
+    <button type="button" id="cancelbtn" class="centerh" onclick="cancel()">Cancel</button>
+  </div>
   <div id="example"></div>
   <h1 class="txtcenter">Pets & their people survey</h1>
 
@@ -60,15 +62,14 @@
     </p>
   
       <textarea name="notes" id="notes" rows="10" cols="30" placeholder="notes..."></textarea><br>
-  
-        <input type="submit" id="submitbtn" value="OK">
-        <input type="button" id="hellobtn" value="Hello">
-        <input type="reset" id="resetbtn" value="Reset">
-  
+      <div class="btncontainerbtm">
+        <button type="submit" id=submitbtn>OK</button>
+        <button type="button" onclick="helloWorld()">Hello...</button>
+        <button type="reset" form="form1">Reset</button>
+      </div>
+     
     </fieldset>
   </form>
- 
-<script src="js-test-form2-script-ie.js"></script>
-
+  <script src="js-test-form2-script-ie.js"></script>
 </body>
 </html>

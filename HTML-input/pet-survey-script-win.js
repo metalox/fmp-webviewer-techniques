@@ -1,3 +1,5 @@
+$("document").ready(function() {
+
 // testing for windows ie explorer
 const form = document.querySelector('form');
 const notes = document.getElementById("notes");
@@ -25,3 +27,5 @@ function handleSubmit(event) {
 cancelbtn.addEventListener('click', cancel);
 hellobtn.addEventListener('click', helloWorld);
 form.addEventListener('submit', handleSubmit);
+
+});
