@@ -3,32 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
-<link rel="stylesheet" href="css-default01.css">
+  <link rel="stylesheet" href="css-default01.css">
   <title>serializeArray demo</title>
   <script src="jquery-min.js"></script>
 </head>
 <body>
- 
-<form id="form1">
-  <div><input type="text" name="a" value="1" id="a"></div>
-  <div><input type="text" name="b" value="2" id="b"></div>
-  <div><input type="hidden" name="c" value="hidden value" id="c"></div>
-  <div>
-    <textarea name="d" rows="8" cols="40">4</textarea>
-  </div>
-  <div><select name="e">
-    <option value="5" selected="selected">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-  </select></div>
-  <div>
-    <input type="checkbox" name="f" id="f" value="f">
-    <input type="checkbox" name="g" id="g" value="9">
-  </div>
-  <div>
-    <input type="submit" name="submitbtn" id="submitbtn" value="Submit">
-  </div>
-</form>
+
+  <input type="button" id="cancelbtn" value="Cancel">
+  <div id="example"></div>
+  <h1 class="txtcenter">Pets & their people survey</h1>
+
+  <form id="form1">
+
+    <fieldset>
+  
+    <legend>People & Pets</legend>
+
+      <input type="hidden" id="id_people" name="id_people" value = "abc123">
+      <input type="hidden" id="hashbefore" name="hashbefore" value = "987654321">
+      <input type="hidden" id="newRecord" name="newRecord" value = "0">
+
+      <label for="dateStart" class="pale">Start date:</label>
+      <input type="date" id="dateStart" name="dateStart" value = "">
+      <label for="dateEnd" class="pale">End date:</label>
+      <input type="date" id="dateEnd" name="dateEnd" value = ""><br>
+
+      <label for="nameFirst" class="pale">First name*:</label><br>
+      <input type="text" id="nameFirst" name="nameFirst" value="Bob" autofocus required><br>
+  
+      <label for="nameLast" class="pale">Last name*:</label><br>
+      <input type="text" id="nameLast" name="nameLast" value="Bobolina" required><br>
+  
+      <label for="petAnimal" class="pale">Pet (animal):</label><br>
+      <select id="petAnimal" name="petAnimal">
+      <option value="none">None</option>  
+      <option value="cat">Cat</option>
+      <option value="dog">Dog</option>
+      <option value="sheep">Sheep</option>
+      <option value="hamster">Hamster</option>
+      <option value="fish">Fish</option>
+      <option value="crocodile">Very Large Australian Salt Water Crocodile</option>
+      </select><br>
+  
+      <label for="petName" class="pale">Pet Name:</label><br>
+      <input type="text" id="petName" name="petName" value=""><br>
+   
+    <p>
+      <input type="checkbox" name="prefs" id="catlover" value="cat lover" />
+      <label for="catlover">Cat Lover</label>
+   
+      <input type="checkbox" name="prefs" id="doglover" value="dog lover" />
+      <label for="doglover">Dog Lover</label>
+   
+      <input type="checkbox" name="prefs" id="sheeplover" value="sheep lover" />
+      <label for="sheeplover">Sheep Lover</label>
+    </p>
+  
+      <textarea name="notes" id="notes" rows="10" cols="30" placeholder="notes..."></textarea><br>
+  
+        <input type="submit" id="submitbtn" value="OK">
+        <input type="button" id="hellobtn" value="Hello">
+        <input type="reset" id="resetbtn" value="Reset">
+  
+    </fieldset>
+  </form>
  
 <script src="js-test-form2-script-ie.js"></script>
 

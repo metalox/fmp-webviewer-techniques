@@ -5,10 +5,6 @@ const cancelbtn = document.getElementById("cancelbtn");
 const hellobtn = document.getElementById("hellobtn");
 const submitbtn = document.getElementById("submitbtn");
 
-const recordinfo = document.getElementById("recordinfo");
-const id_people = recordinfo.getAttribute("data-id_people");
-const hashBefore = recordinfo.getAttribute("data-hashBefore");
-const newRecord = recordinfo.getAttribute("data-newRecord");
 
 // cancel
 function cancel() {

@@ -7,10 +7,6 @@ const form = document.getElementById("form1");
 const notes = document.getElementById("notes");
 const cancelbtn = document.getElementById("cancelbtn");
 const submitbtn = document.getElementById("submitbtn");
-const recordinfo = document.getElementById("recordinfo");
-const id_people = recordinfo.getAttribute("data-id_people");
-const hashBefore = recordinfo.getAttribute("data-hashBefore");
-const newRecord = recordinfo.getAttribute("data-newRecord");
 
 form.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
 
@@ -29,9 +25,6 @@ event.preventDefault();
 const data = new FormData(event.target);
 var formData = Object.fromEntries(data.entries());
 formData.prefs = data.getAll("prefs");
-formData.id_people = id_people ;
-formData.hashBefore = hashBefore ;
-formData.newRecord = newRecord  ;
 const result = JSON.stringify( formData );
 alert(result);
 };

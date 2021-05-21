@@ -6,7 +6,6 @@
 </head>
 <body>
 <input type="button" id="cancelbtn" value="Cancel">
-<div id="recordinfo" data-id_people="abc123" data-hashBefore="987654321" data-newRecord="0"></div>
 <h1 class="txtcenter">Pets & their people survey</h1>
 <p>please fill in this form</p>
 
@@ -15,6 +14,10 @@
   <fieldset>
 
   <legend>People & Pets</legend>
+
+  <input type="hidden" id="id_people" name="id_people" value = "abc123">
+  <input type="hidden" id="hashbefore" name="hashbefore" value = "987654321">
+  <input type="hidden" id="newRecord" name="newwwRecord" value = "0">
 
     <label for="nameFirst" class="pale">First name*:</label><br>
     <input type="text" id="nameFirst" name="nameFirst" value="" autofocus required><br>
