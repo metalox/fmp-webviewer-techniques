@@ -15,7 +15,6 @@
   color: #A9A9A9;
 }
 
-
 body {
    background-color: rgb(232,237,239);
    background-image: var(--bckgrndGrad);
@@ -115,6 +114,10 @@ button,input[type=button],input[type=submit],input[type=reset] {
 
 .txtcenter {
 text-align: center;
+}
+
+.warning {
+  color: red;
 }
 
 button:focus, input:focus,select:focus,textarea:focus {

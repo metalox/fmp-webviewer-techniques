@@ -16,7 +16,7 @@ const submitbtn = document.getElementById("submitbtn");
 
 // on load:
 form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
-$("#example").html("<p>Return Key Blocked</p>");
+$("#example").html('<p class="warning">Return Key Blocked</p>');
 
 // cancel
 function cancel() {
@@ -30,12 +30,12 @@ function helloWorld() {
 // control return key behaviour
 function noReturn() {
     form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
-    $("#example").html("<p>Return Key Blocked</p>");
+    $("#example").html('<p class="warning">Return Key Blocked</p>');
 };
 
 function allowReturn() {
     form1.removeAttribute("onkeydown");
-    $("#example").html("<p>Return Key Allowed</p>");
+    $("#example").html('<p class="warning">Return Key Allowed</p>');
 };
 
 $.fn.getFormValues = function(){
