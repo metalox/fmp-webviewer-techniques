@@ -18,6 +18,16 @@ const submitbtn = document.getElementById("submitbtn");
 form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
 $("#example").html('<p class="warning">Return Key Blocked</p>');
 
+// getRecordinfo
+function getRecordinfo() {
+    var obj = {};
+    obj.newRecord = $("#recordinfo").data("newrecord");
+    obj.id_people = $("#recordinfo").data("id_people");
+    obj.hashbefore = $("#recordinfo").data("hashbefore");
+      //  alert(JSON.stringify(recordinfo));
+      return obj;
+    };
+
 // cancel
 function cancel() {
     alert("cancel");
@@ -38,6 +48,8 @@ function allowReturn() {
     $("#example").html('<p class="warning">Return Key Allowed</p>');
 };
 
+
+
 $.fn.getFormValues = function(){
   var formvals = {};
   $.each($(':input',this).serializeArray(),function(i,obj){     
@@ -52,8 +64,12 @@ $.fn.getFormValues = function(){
 
 $( "form" ).submit(function( event ) {
     event.preventDefault();
-    var myarr = $('#form1').getFormValues();
-   alert(JSON.stringify(myarr));
+    var obj = {};
+    var formarr = $('#form1').getFormValues();
+    var recordinfo = getRecordinfo();
+    obj.recordinfo = recordinfo ;
+    obj.recorddata = formarr ;
+   alert(JSON.stringify(obj));
    });
 
 notes.addEventListener('focus', allowReturn);
