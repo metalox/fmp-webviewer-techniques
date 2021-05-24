@@ -1,7 +1,12 @@
+<!-- put hidden record info in this div-->
+<div id="recordinfo" data-id_people="abc123" data-hashbefore="987654321" data-newrecord="0"></div>
+
 <div class="btncontainertop">
   <button type="button" id="cancelbtn" class="centerh" onclick="cancel()">Cancel</button>
 </div>
+
 <div id="example"></div>
+
 <h1 class="txtcenter">Pets & their people survey</h1>
 
 <form id="form1">
@@ -11,10 +16,10 @@
   <legend>People & Pets</legend>
 
     <label for="nameFirst" class="pale">First name*:</label><br>
-    <input type="text" id="nameFirst" name="nameFirst" value="" autofocus required><br>
+    <input type="text" id="nameFirst" name="nameFirst" value="Bob" autofocus required><br>
 
     <label for="nameLast" class="pale">Last name*:</label><br>
-    <input type="text" id="nameLast" name="nameLast" value="" required><br>
+    <input type="text" id="nameLast" name="nameLast" value="Bobolina" required><br>
 
     <label for="petAnimal" class="pale">Pet (animal):</label><br>
     <select id="petAnimal" name="petAnimal">
@@ -29,27 +34,26 @@
 
     <label for="petName" class="pale">Pet Name:</label><br>
     <input type="text" id="petName" name="petName" value=""><br>
+ 
+    <p>
+      <input type="checkbox" name="prefs" id="catlover" value="cat lover" />
+      <label for="catlover">Cat Lover</label>
+   
+      <input type="checkbox" name="prefs" id="doglover" value="dog lover" />
+      <label for="doglover">Dog Lover</label>
+   
+      <input type="checkbox" name="prefs" id="sheeplover" value="sheep lover" />
+      <label for="sheeplover">Sheep Lover</label>
+    </p>
 
- 
-  <p>
-    <input type="checkbox" name="prefs" id="catlover" value="cat lover" />
-    <label for="catlover">Cat Lover</label>
- 
-    <input type="checkbox" name="prefs" id="doglover" value="dog lover" />
-    <label for="doglover">Dog Lover</label>
- 
-    <input type="checkbox" name="prefs" id="sheeplover" value="sheep lover" />
-    <label for="sheeplover">Sheep Lover</label>
-  </p>
-
-    <textarea name="notes" rows="10" cols="30" placeholder="notes..."></textarea><br>
+    <textarea name="notes" id="notes" rows="10" cols="30" placeholder="notes..."><!--notes--></textarea><br>
 
     <div class="btncontainerbtm">
       <button type="submit" id="submitbtn" form="form1">OK</button>
       <button type="button" onclick="helloWorld()">Hello</button>
       <button type="reset" form="form1">Reset</button>
-     <button type="button"  onclick="scrollToTop()">Top</button>
+     <button type="button" onclick="scrollToTop()">Top</button>
     </div>
-
+   
   </fieldset>
 </form>
