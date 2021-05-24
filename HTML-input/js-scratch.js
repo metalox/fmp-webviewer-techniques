@@ -9,7 +9,7 @@ function helloWorld() {
 var recordinfo = {};
 recordinfo.newRecord = $("#recordinfo").data("newrecord");
 recordinfo.id_people = $("#recordinfo").data("id_people");
-recordinfo.hashbefore = $("#recordinfo").data("hashbefore");
+recordinfo.hashBefore = $("#recordinfo").data("hashbefore");
     alert(JSON.stringify(recordinfo));
 };
 

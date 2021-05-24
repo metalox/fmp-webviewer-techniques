@@ -15,7 +15,7 @@ function getRecordinfo() {
     var obj = {};
     obj.newRecord = $("#recordinfo").data("newrecord");
     obj.id_people = $("#recordinfo").data("id_people");
-    obj.hashbefore = $("#recordinfo").data("hashbefore");
+    obj.hashBefore = $("#recordinfo").data("hashbefore");
       //  alert(JSON.stringify(recordinfo));
       return obj;
     };
