@@ -9,6 +9,10 @@ const submitbtn = document.getElementById("submitbtn");
 // on load:
 form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
 $("#example").html('<p class="warning">Return Key Blocked</p>');
+// scroll to top on load
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 
 // getRecordinfo
 function getRecordinfo() {
@@ -24,11 +28,17 @@ function getRecordinfo() {
 function cancel() {
     // alert("cancel");
   FileMaker.PerformScriptWithOption ( fmScriptEdit, "cancel", "0" );
-};   
+};  
+ 
 // hello world
 function helloWorld() {
     // alert("Hello World");
   FileMaker.PerformScriptWithOption ( fmScriptHello, "Hello World", "0" );
+};
+
+// scroll to top
+ function scrollToTop() {
+  $(window).scrollTop(0);
 };
 
 // control return key behaviour
@@ -69,4 +79,3 @@ notes.addEventListener('focus', allowReturn);
 notes.addEventListener('blur', noReturn);
 submitbtn.addEventListener('focus', allowReturn);
 submitbtn.addEventListener('blur', noReturn);
-

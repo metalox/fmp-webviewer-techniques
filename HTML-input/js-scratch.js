@@ -2,7 +2,7 @@
 //const form1 = document.getElementById("form1");
 //const submitbtn = document.getElementById("submitbtn");
 
-
+$(window).scrollTop(0);
 
 // hello world
 function helloWorld() {

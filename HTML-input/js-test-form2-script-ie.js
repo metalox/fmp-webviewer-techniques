@@ -17,13 +17,17 @@ const submitbtn = document.getElementById("submitbtn");
 // on load:
 form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
 $("#example").html('<p class="warning">Return Key Blocked</p>');
+// scroll to top on load
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 
 // getRecordinfo
 function getRecordinfo() {
     var obj = {};
     obj.newRecord = $("#recordinfo").data("newrecord");
     obj.id_people = $("#recordinfo").data("id_people");
-    obj.hashbefore = $("#recordinfo").data("hashbefore");
+    obj.hashBefore = $("#recordinfo").data("hashbefore");
       //  alert(JSON.stringify(recordinfo));
       return obj;
     };
@@ -37,6 +41,11 @@ function helloWorld() {
     alert("Hello World");
 };
 
+// scroll to top
+function scrollToTop() {
+    $(window).scrollTop(0);
+  };
+  
 // control return key behaviour
 function noReturn() {
     form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
