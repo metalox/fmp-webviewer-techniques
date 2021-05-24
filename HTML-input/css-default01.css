@@ -1,129 +1,129 @@
 :root{  
-  --bckgrnd: rgb(232,237,239);
-  --bckgrndGrad: linear-gradient( rgb(232,237,239), rgb(255,255,255)); 
-  --textA: rgb(39,66,86);
-  --textB: rgba(39,66,86,.6);
-  --textH: rgb(72,110,136);
-  --textPlacholder: #A9A9A9;
-}
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #A9A9A9;
-}
-
-:-ms-input-placeholder { /* IE 10+ */
-  color: #A9A9A9;
-}
-
-body {
-   background-color: rgb(232,237,239);
-   background-image: var(--bckgrndGrad);
-    font-family: Verdana, Helvetica, sans-serif;
-    color: rgb(39,66,86);
-}
-
-h1,h2,h3,h4,h5,h6{
-    color: rgb(72,110,136);
-}
-
-a {
-    text-decoration: none ;
-    color: rgb(39,66,86);
-}
-
-form{
-    width: 90%;
-}
-
-fieldset{
-    border-style: solid;
-    border-color: rgba(39,66,86,.2);
-    border-width: 8px;
-    box-sizing: border-box;
-}
-
-label.pale{
-    color: rgba(39,66,86,.6);
-}
-
-input[type=text],input[type=date],select {
-    background-color: rgb(255,255,255);
-    color: rgb(39,66,86);
-   font-size: 20px;
-   padding: 4px 8px;
-   margin: 8px 20px;
-   box-sizing: border-box;
-}
-
-input[type=text] {
- width: 90%;
-}
-
-select {
-   width: auto;
-}
-
-textarea{
-    font-size: 20px;
+    --bckgrnd: rgb(232,237,239);
+    --bckgrndGrad: linear-gradient( rgb(232,237,239), rgb(255,255,255)); 
+    --textA: rgb(39,66,86);
+    --textB: rgba(39,66,86,.6);
+    --textH: rgb(72,110,136);
+    --textPlacholder: #A9A9A9;
+  }
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #A9A9A9;
+  }
+  
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #A9A9A9;
+  }
+  
+  body {
+     background-color: rgb(232,237,239);
+     background-image: var(--bckgrndGrad);
+      font-family: Verdana, Helvetica, sans-serif;
+      color: rgb(39,66,86);
+  }
+  
+  h1,h2,h3,h4,h5,h6{
+      color: rgb(72,110,136);
+  }
+  
+  a {
+      text-decoration: none ;
+      color: rgb(39,66,86);
+  }
+  
+  form{
+      width: 90%;
+  }
+  
+  fieldset{
+      border-style: solid;
+      border-color: rgba(39,66,86,.2);
+      border-width: 8px;
+      box-sizing: border-box;
+  }
+  
+  label.pale{
+      color: rgba(39,66,86,.6);
+  }
+  
+  input[type=text],input[type=date],select {
+      background-color: rgb(255,255,255);
+      color: rgb(39,66,86);
+     font-size: 20px;
+     padding: 4px 8px;
+     margin: 8px 20px;
+     box-sizing: border-box;
+  }
+  
+  input[type=text] {
    width: 90%;
-   margin: 24px 20px;
-}
-
-button,input[type=button],input[type=submit],input[type=reset] {
-  background-color: rgb(72,110,136);
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  border: none;
-  height: 48px;
-  width: 25%;
-  margin: auto;
-}
-
-#cancelbtn{
-  width: auto;
-}
-
-.btncontainertop{
-  height: 60px;
-  position: relative;
-}
-
-.btncontainerbtm{
+  }
+  
+  select {
+     width: auto;
+  }
+  
+  textarea{
+      font-size: 20px;
+     width: 90%;
+     margin: 24px 20px;
+  }
+  
+  button,input[type=button],input[type=submit],input[type=reset] {
+    background-color: rgb(72,110,136);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    height: 48px;
+    width: 25%;
+    margin: auto;
+  }
+  
+  #cancelbtn{
+    width: auto;
+  }
+  
+  .btncontainertop{
     height: 60px;
     position: relative;
-    margin-left: 100px; 
-}
-
-.centerh{  
-  margin: 0;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.txtleft {
-  text-align: left;
-}
-
-.txtright {
-  text-align: right;
-}
-
-.txtcenter {
-text-align: center;
-}
-
-.warning {
-  color: red;
-}
-
-button:focus, input:focus,select:focus,textarea:focus {
-  background-color: pink;
-}
-
-button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{
-    cursor: pointer;
-}
+  }
+  
+  .btncontainerbtm{
+      height: 60px;
+      position: relative;
+      margin-left: 100px; 
+  }
+  
+  .centerh{  
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  .txtleft {
+    text-align: left;
+  }
+  
+  .txtright {
+    text-align: right;
+  }
+  
+  .txtcenter {
+  text-align: center;
+  }
+  
+  .warning {
+    color: red;
+  }
+  
+  button:focus, input:focus,select:focus,textarea:focus {
+    background-color: pink;
+  }
+  
+  button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{
+      cursor: pointer;
+  }

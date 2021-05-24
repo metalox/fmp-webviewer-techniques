@@ -1,42 +1,72 @@
-<!-- note: html comments,  below, will be substituted when running the script to set the webviewer content -->
- 
-<div class="btncontainertop">
-    <button type="button" id="cancelbtn" class="centerh" onclick="cancel()">Cancel</button>
-  </div>
-  <div id="example"></div>
-  <h1 class="txtcenter">Pets & their people survey</h1>
+// Form Submit - required js lib: jQuery
 
-  <form id="form1">
+const fmScriptHello="hello_world_js";
+const fmScriptEdit="edit_person_OK_jsP";
+const form1 = document.getElementById("form1");
+const notes = document.getElementById("notes");
+const submitbtn = document.getElementById("submitbtn");
 
-    <fieldset>
-  
-    <legend>People & Pets</legend>
+// on load:
+form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
+$("#example").html('<p class="warning">Return Key Blocked</p>');
 
-      <input type="hidden" id="id_people" name="id_people" value = "<!--id_people-->">
-      <input type="hidden" id="hashbefore" name="hashbefore" value = "<!--hashBefore-->">
-      <input type="hidden" id="newRecord" name="newRecord" value = "<!--newRecord-->">
+// getRecordinfo
+function getRecordinfo() {
+    var obj = {};
+    obj.newRecord = $("#recordinfo").data("newrecord");
+    obj.id_people = $("#recordinfo").data("id_people");
+    obj.hashbefore = $("#recordinfo").data("hashbefore");
+      //  alert(JSON.stringify(recordinfo));
+      return obj;
+    };
 
-      <label for="nameFirst" class="pale">First name*:</label><br>
-      <input type="text" id="nameFirst" name="nameFirst" value="<!--nameFirst-->" autofocus required><br>
-  
-      <label for="nameLast" class="pale">Last name*:</label><br>
-      <input type="text" id="nameLast" name="nameLast" value="<!--nameLast-->" required><br>
-  
-    <!--animalsSelect-->
-  
-      <label for="petName" class="pale">Pet Name:</label><br>
-      <input type="text" id="petName" name="petName" value="<!--petName-->"><br>
-   
-    <!--prefsCheckbox-->
-  
-      <textarea name="notes" id="notes" rows="10" cols="30" placeholder="notes..."><!--notes--></textarea><br>
+// cancel
+function cancel() {
+    // alert("cancel");
+  FileMaker.PerformScriptWithOption ( fmScriptEdit, "cancel", "0" );
+};   
+// hello world
+function helloWorld() {
+    // alert("Hello World");
+  FileMaker.PerformScriptWithOption ( fmScriptHello, "Hello World", "0" );
+};
 
-      <div class="btncontainerbtm">
-        <button type="submit" id="submitbtn">OK</button>
-        <button type="button" onclick="helloWorld()">Hello...</button>
-        <button type="reset" form="form1">Reset</button>
-      </div>
-     
-    </fieldset>
-  </form>
-  <script src="js-test-form2-script-ie.js"></script>
+// control return key behaviour
+function noReturn() {
+    form1.setAttribute ("onkeydown" , "return event.key != 'Enter';" );
+    $("#example").html('<p class="warning">Return Key Blocked</p>');
+};
+
+function allowReturn() {
+    form1.removeAttribute("onkeydown");
+    $("#example").html('<p class="warning">Return Key Allowed</p>');
+};
+
+$.fn.getFormValues = function(){
+  var formvals = {};
+  $.each($(':input',this).serializeArray(),function(i,obj){     
+      if (formvals[obj.name] == undefined)
+          formvals[obj.name] = obj.value;
+      else if (typeof formvals[obj.name] == Array) 
+          formvals[obj.name].push(obj.value);
+      else formvals[obj.name] = [formvals[obj.name],obj.value];
+  }); 
+  return formvals;
+};
+
+$( "form" ).submit(function( event ) {
+    event.preventDefault();
+    var obj = {};
+    var formarr = $('#form1').getFormValues();
+    var recordinfo = getRecordinfo();
+    obj.recordinfo = recordinfo ;
+    obj.recorddata = formarr ;
+   //alert(JSON.stringify(obj));
+ FileMaker.PerformScriptWithOption ( fmScriptEdit, JSON.stringify(obj) , "0" );
+   });
+
+notes.addEventListener('focus', allowReturn);
+notes.addEventListener('blur', noReturn);
+submitbtn.addEventListener('focus', allowReturn);
+submitbtn.addEventListener('blur', noReturn);
+
