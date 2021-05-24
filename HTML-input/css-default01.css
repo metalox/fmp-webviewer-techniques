@@ -76,7 +76,7 @@
     text-decoration: none;
     border: none;
     height: 48px;
-    width: 25%;
+    width: 110px;
     margin: auto;
   }
   
@@ -92,7 +92,7 @@
   .btncontainerbtm{
       height: 60px;
       position: relative;
-      margin-left: 100px; 
+      margin-left: 10px; 
   }
   
   .centerh{  
@@ -126,4 +126,5 @@
   
   button:hover,input[type=button]:hover,input[type=submit]:hover,input[type=reset]:hover{
       cursor: pointer;
+      background-color: pink;
   }
